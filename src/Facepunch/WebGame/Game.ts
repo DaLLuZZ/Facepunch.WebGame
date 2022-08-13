@@ -84,7 +84,7 @@ namespace Facepunch {
                     }
                 });
 
-                window.addEventListener("mousewheel", (evnt: MouseWheelEvent) => {
+                window.addEventListener("mousewheel", (evnt: WheelEvent) => {
                     const handled = this.onMouseScroll(evnt.deltaY);
                     if (handled) evnt.preventDefault();
                     return handled;
