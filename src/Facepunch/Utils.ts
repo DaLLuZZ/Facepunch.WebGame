@@ -27,6 +27,7 @@ namespace Facepunch {
 
         static getImage(url: string, success: (response: HTMLImageElement) => void, failure?: (error: any) => void, progress?: (loaded: number, total: number) => void): void {
             const image = new Image();
+            image.crossOrigin = "anonymous";
             image.src = url;
             image.addEventListener("load", ev => success(image));
             
