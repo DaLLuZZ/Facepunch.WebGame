@@ -8,7 +8,7 @@ namespace Facepunch {
             request.addEventListener("load", ev => success(request.responseText));
 
             if (failure != null) {
-                request.addEventListener("error", ev => failure(ev.error));
+                request.addEventListener("error", ev => failure(request.responseText));
                 request.addEventListener("abort", ev => failure(Http.cancelled));
             }
 
