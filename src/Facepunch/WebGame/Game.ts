@@ -85,7 +85,7 @@ namespace Facepunch {
                 });
 
                 window.addEventListener("mousewheel", evnt => {
-                    const handled = this.onMouseScroll(evnt.wheelDelta / 400);
+                    const handled = this.onMouseScroll(evnt.deltaX);
                     if (handled) evnt.preventDefault();
                     return handled;
                 });
@@ -231,7 +231,7 @@ namespace Facepunch {
 
             protected onMouseUp(button: MouseButton, screenPos: Vector2, target: EventTarget): boolean { return false; }
 
-            protected onMouseScroll(delta: number): boolean { return false; }
+            protected onMouseScroll(delta: double): boolean { return false; }
 
             protected onMouseMove(screenPos: Vector2): void {}
             protected onMouseLook(delta: Vector2): void {}
